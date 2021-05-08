@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 
-	helper "github.com/ne2blink/go-mod-helper"
+	"github.com/ne2blink/go-mod-helper/pkg/mod"
 )
 
 func main() {
@@ -12,11 +13,9 @@ func main() {
 		fmt.Println("no link")
 		os.Exit(1)
 	}
-	h := helper.New(os.Args[1])
-	err := h.Get()
+	resolved, err := mod.Resolve(os.Args[1])
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
-	h.Print()
+	fmt.Println(resolved)
 }
