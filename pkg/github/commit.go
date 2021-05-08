@@ -4,9 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io"
 	"net/http"
-	"os"
 	"time"
 )
 
@@ -31,7 +29,6 @@ func GetHeadCommit(repo, branch string) (*Commit, error) {
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		io.Copy(os.Stdout, resp.Body)
 		return nil, errors.New(resp.Status)
 	}
 	decoder := json.NewDecoder(resp.Body)
