@@ -23,7 +23,7 @@ func resolveGitHub(path string) (string, error) {
 
 	return fmt.Sprintf("github.com/%s v0.0.0-%s-%s",
 		repo,
-		commit.Commit.Author.Date.UTC().Format("20060102150405"),
+		commit.Commit.Committer.Date.UTC().Format("20060102150405"),
 		commit.SHA[:12],
 	), nil
 }
