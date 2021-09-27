@@ -11,9 +11,9 @@ import (
 type Commit struct {
 	SHA    string `json:"sha"`
 	Commit struct {
-		Author struct {
+		Committer struct {
 			Date time.Time `json:"date"`
-		} `json:"author"`
+		} `json:"committer"`
 	} `json:"commit"`
 }
 
