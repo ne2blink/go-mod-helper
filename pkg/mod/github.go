@@ -7,14 +7,9 @@ import (
 	"github.com/ne2blink/go-mod-helper/pkg/github"
 )
 
-func resolveGitHub(path string) (string, error) {
-	parts := strings.SplitN(path, "#", 2)
-	repo := strings.TrimSuffix(parts[0], ".git")
+func resolveGitHub(path, branch string) (string, error) {
+	repo := strings.TrimSuffix(path, ".git")
 	repo = strings.TrimPrefix(repo, "/")
-	branch := ""
-	if len(parts) == 2 {
-		branch = parts[1]
-	}
 
 	commit, err := github.GetHeadCommit(repo, branch)
 	if err != nil {
