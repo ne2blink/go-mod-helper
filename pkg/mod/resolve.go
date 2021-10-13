@@ -12,7 +12,7 @@ func Resolve(uri string) (string, error) {
 		return "", err
 	}
 	if url.Host == "github.com" {
-		return resolveGitHub(url.Path)
+		return resolveGitHub(url.Path, url.Fragment)
 	}
 	return "", errors.New("only GitHub repositories are supported")
 }
