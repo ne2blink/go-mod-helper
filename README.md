@@ -23,11 +23,21 @@ go run .\cmd\resmod https://github.com/ne2blink/go-mod-helper#main
 Linux or macOS
 ```bash
 go build ./cmd/resmod
-resmod https://github.com/ne2blink/go-mod-helper#main
 ```
 
 Windows
 ```bash
 go build .\cmd\resmod
+```
+
+## Usage
+
+Linux or macOS
+```bash
+resmod https://github.com/ne2blink/go-mod-helper#main
+```
+
+Windows
+```bash
 .\resmod.exe https://github.com/ne2blink/go-mod-helper#main
 ```
