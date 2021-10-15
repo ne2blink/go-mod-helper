@@ -30,14 +30,21 @@ Windows
 go build .\cmd\resmod
 ```
 
-## Usage
+Or you can use `go install` to install it.
 
 Linux or macOS
 ```bash
-resmod https://github.com/ne2blink/go-mod-helper#main
+go install ./cmd/resmod
 ```
 
 Windows
 ```bash
-.\resmod.exe https://github.com/ne2blink/go-mod-helper#main
+go install .\cmd\resmod
+```
+
+## Usage
+
+Linux or macOS or Windows
+```bash
+resmod https://github.com/ne2blink/go-mod-helper#main
 ```
