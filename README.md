@@ -10,12 +10,12 @@ github.com/ne2blink/go-mod-helper v0.0.0-20211013060021-39560825f6a1
 
 Linux or macOS
 ```bash
-go run ./cmd/resmod https://github.com/ne2blink/go-mod-helper#main
+go install https://github.com/ne2blink/go-mod-helper
 ```
 
 Windows
 ```bash
-go run .\cmd\resmod https://github.com/ne2blink/go-mod-helper#main
+go install https://github.com/ne2blink/go-mod-helper
 ```
 
 ## Build
@@ -28,18 +28,6 @@ go build ./cmd/resmod
 Windows
 ```bash
 go build .\cmd\resmod
-```
-
-Or you can use `go install` to install it.
-
-Linux or macOS
-```bash
-go install ./cmd/resmod
-```
-
-Windows
-```bash
-go install .\cmd\resmod
 ```
 
 ## Usage
