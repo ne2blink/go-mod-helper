@@ -9,13 +9,7 @@ github.com/ne2blink/go-mod-helper v0.0.0-20211013060021-39560825f6a1
 ## Quick Start
 
 ```bash
-go install https://github.com/ne2blink/go-mod-helper
-```
-
-## Build
-
-```bash
-go build ./cmd/resmod
+go install github.com/ne2blink/go-mod-helper/cmd/resmod
 ```
 
 ## Usage
